@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           
+            $('#hide').click(function(){
+                $('h2').hide();
+            });
+            $('#show').click(function(){
+                $('h2').show();
+            });
+            $('#toggle').click(function(){
+                $('h3').toggle();
+            });
+            $('#slideDown').click(function(){
+                $('h1').slideDown();
+            });
+            $('#slideUp').click(function(){
+                $('h1').slideUp();
+            });
+            $('#slideToggle').click(function(){
+                $('h4').slideToggle();
+            });
+            $('#fadeIn').click(function(){
+                $('h5').fadeIn();
+            });
+            $('#fadeOut').click(function(){
+                $('h5').fadeOut();
+            });
+            $('#addClass').click(function(){
+               $('.AC').addClass('shrek');
+            });
+            $('#before').click(function(){
+                $('.why').before('<p>why.</p>');
+            });
+            $('#after').click(function(){
+                $('.why2').after('<p>also why.</p>');
+            });
+            $('#append').click(function(){
+                $('.djkhalid').append('<b>Dj Khalid ;)  </b>')
+            });
+            $('#html').click(function(){
+                $('.change').html("<p>now you don't</p>")
+            });
+            $('#val').click(function(){
+                $('input:text').val('triiiipy')
+            });
+            $('#text').click(function(){
+                $('p').text('YOU MUST CONSTRUCT ADDITIONAL PYLONS');
+            });
+            $(".btn1").click(function(){
+                $("div").data("greeting", "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.");
+            });
+            $(".btn2").click(function(){
+                alert($("div").data("greeting"));
+            });
+
+        });
+    </script>
+    <style>
+        #wrapper{
+            text-align: center;
+            margin: 0px auto;
+            /* height: 900px; */
+            background-image: url(http://eskipaper.com/images/cat-background-2.jpg);
+        }
+        .shrek{
+            font-size: 500%;
+            color: green;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Try out the hide and show buttons</h2>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <br>
+        <h3>AND THIS IS EVEN BETTER</h3>
+        <button id="toggle">toggle this</button>
+        <br>
+        <h1>WAPOW</h1>
+        <button id="slideDown">sliiiide to the down</button>
+        <button id="slideUp">sliiide to the up</button>
+        <br>
+        <h4>CRISS CROSS</h4>
+        <button id="slideToggle">CRISS CROSS</button>
+        <br>
+        <h5>FREEZE</h5>
+        <button id="fadeIn">everybody clap your hands</button>
+        <button id="fadeOut">clapclapclapclapclap</button>
+        <br>
+        <h6 class="AC">Mean green</h6>
+        <button id="addClass">SHREKING MACHINE</button>
+        <br>
+        <p class="why why2">add stuff to this</p>
+        <button id="before">before</button>
+        <button id="after">after</button>
+        <br>
+        <p class="djkhalid">Say my name. </p>
+        <button id="append">ANOTHA ONE</button>
+        <br>
+        <p class="change">NOW YOU SEE ME</p>
+        <button id="html">whats that?</button>
+        <br>
+        <p>hey man... <input type="text" name="turd"></p>
+        <button id="val">try this</button>
+        <br>
+        <br>
+        <button id="text">Build?</button>
+        <br>
+        <div>something</div>
+        <button class="btn1">attach data</button>
+        <button class="btn2">alert attached data</button>
+        <div>This is a div</div>
+    </div>  
+</body>
+</html>
